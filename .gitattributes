@@ -1,0 +1,6 @@
+# Normalize text files while keeping binary archives byte-for-byte intact.
+* text=auto
+
+# GitHub Pages and Kodi must receive the real ZIP bytes, not Git LFS pointers.
+# A specific large archive can opt back into LFS later with a rule below this one.
+*.zip -filter -diff -merge -text
